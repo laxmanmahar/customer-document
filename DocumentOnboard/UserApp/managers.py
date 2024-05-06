@@ -12,8 +12,6 @@ class CustomUserManager(BaseUserManager):
         **extra_fields: dict
     ):
         """Create and save a User with the given email and password."""
-        # if not email:
-        #     raise ValueError("Email and password both reqkuired")
 
         email = self.normalize_email(email)
         extra_fields.pop("username", None)
